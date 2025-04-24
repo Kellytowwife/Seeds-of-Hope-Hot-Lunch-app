@@ -1,0 +1,16 @@
+
+{
+  "short_name": "SeedsOfHope",
+  "name": "Seeds of Hope App",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4caf50"
+}
