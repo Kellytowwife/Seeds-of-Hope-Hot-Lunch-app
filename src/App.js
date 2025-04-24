@@ -1,5 +1,3 @@
-// Seeds of Hope App - Google Forms Integration UI
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -21,4 +19,32 @@ const forms = [
   },
 ];
 
-export default function
+export default function SeedsOfHopeApp() {
+  const [loading, setLoading] = useState(false);
+
+  const openForm = (url) => {
+    setLoading(true);
+    window.open(url, "_blank");
+    setTimeout(() => setLoading(false), 1000);
+  };
+
+  return (
+    <div className="min-h-screen bg-white p-6 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      {forms.map((form, idx) => (
+        <motion.div key={idx} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <Card className="shadow-xl rounded-2xl border border-gray-300">
+            <CardContent className="p-6 flex flex-col gap-4 items-center">
+              <h2 className="text-2xl font-semibold text-center text-gray-900">
+                {form.title}
+              </h2>
+              <Button className="w-full text-lg font-medium" onClick={() => openForm(form.url)} disabled={loading}>
+                {loading ? <Loader className="animate-spin" /> : `Open ${form.title}`}
+              </Button>
+            </CardContent>
+          </Card>
+        </motion.div>
+      ))}
+    </div>
+  );
+}
+
