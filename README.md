@@ -28,3 +28,4 @@ The app is designed to:
 
 - React (via Vite or Create React App)
 - Tailwind CSS
+Updated to trigger deployment
