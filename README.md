@@ -3,7 +3,7 @@
 
 This is a simple, tablet-friendly web application built for **Seeds of Hope** to streamline check-ins and service tracking for the Hot Lunch Program.
 
-## 💡 Purpose
+## 💡 Purpose:
 
 The app is designed to:
 - Provide fast, easy access to essential Google Forms for check-ins and services
